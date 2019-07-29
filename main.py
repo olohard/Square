@@ -26,9 +26,9 @@ while True:                                                                 # Ma
     while delta > 4.0:
         delta -= 4.0
 
-
+        # Moing section, this if's make boundaries in our game 
+        
         key = pygame.key.get_pressed()
-
 
         if key[pygame.K_a] and x > vel:                         # Square moves left
             x -= vel
