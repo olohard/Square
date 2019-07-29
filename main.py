@@ -4,25 +4,25 @@ pygame.init()
 pygame.display.set_caption("First game")
 screen = pygame.display.set_mode((1280,720))
 
-x = 50
+x = 50                                                                      # Our object
 y = 50
 width = 50
 height = 50
 vel = 5
 
-clock = pygame.time.Clock()
+clock = pygame.time.Clock()                                                 # Function needed in section FPS
 delta = 0.0
 
 
 
-while True:
+while True:                                                                 # Main loop
     for event in pygame.event.get():
         if event == pygame.QUIT:
-            sys.exit(0)
+            sys.exit(0)                                                         
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             sys.exit(0)
 
-    delta += clock.tick()
+    delta += clock.tick()                                                   # FPS
     while delta > 4.0:
         delta -= 4.0
 
